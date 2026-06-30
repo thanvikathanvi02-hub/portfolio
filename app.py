@@ -93,23 +93,52 @@ hr{
 """, unsafe_allow_html=True)
 
 # ---------- HEADER ----------
-st.markdown('<p class="big-title">Tetali Thanvika</p>', unsafe_allow_html=True)
-st.markdown('<p class="subtitle">Data Visualization & IoT Enthusiast | Python • SQL • Power BI • Tableau</p>', unsafe_allow_html=True)
+st.markdown("""
+<div style="text-align:center;padding:25px;">
+<h1 class="big-title">Tetali Thanvika</h1>
+<p class="subtitle">
+Data Analyst • Python Developer • IoT Enthusiast
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns(3)
-col1.markdown("📧 thanvikathanvika02@gmail.com")
-col2.markdown("[🔗 LinkedIn](https://www.linkedin.com/in/tetali-thanvika)")
-col3.markdown("[💻 GitHub](https://github.com/thanvikathanvi02-hub)")
+st.markdown("""
+<div style="display:flex;
+justify-content:center;
+align-items:center;
+gap:35px;
+font-size:18px;
+font-weight:600;
+margin-top:10px;
+margin-bottom:25px;">
+
+<span style="color:white;">📧 thanvikathanvika02@gmail.com</span>
+
+<a href="https://www.linkedin.com/in/tetali-thanvika"
+style="color:white;text-decoration:none;">
+🔗 LinkedIn
+</a>
+
+<a href="https://github.com/thanvikathanvi02-hub"
+style="color:white;text-decoration:none;">
+💻 GitHub
+</a>
+
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
 # ---------- PROFILE SUMMARY ----------
 st.markdown('<p class="section-header">Profile Summary</p>', unsafe_allow_html=True)
-st.write("""
+
+st.markdown("""
+<div class="card">
 Engineering student with hands-on experience in IoT-based sensor data collection and real-time monitoring,
-with strong skills in Python, SQL, and data visualization using Tableau and Power BI. Experienced in building
-data pipelines, ML-based analytics, and BI dashboards.
-""")
+with strong skills in Python, SQL, and data visualization using Tableau and Power BI.
+Experienced in building data pipelines, ML-based analytics, and BI dashboards.
+</div>
+""", unsafe_allow_html=True)
 
 # ---------- EDUCATION ----------
 st.markdown('<p class="section-header">Education</p>', unsafe_allow_html=True)
@@ -131,8 +160,13 @@ skills = {
     "Tools & Platforms": ["VS Code", "GitHub", "Excel", "Arduino IDE"],
 }
 for cat, items in skills.items():
-    st.markdown(f"**{cat}**")
-    st.markdown("".join([f'<span class="skill-badge">{i}</span>' for i in items]), unsafe_allow_html=True)
+    st.subheader(cat)
+    st.pills(
+        label="",
+        options=items,
+        selection_mode="multi",
+        default=items
+    )
     st.write("")
 
 # ---------- WORK EXPERIENCE ----------
@@ -199,8 +233,8 @@ for title, date, bullets, tech in projects:
 # ---------- ACHIEVEMENTS ----------
 st.markdown('<p class="section-header">Achievements</p>', unsafe_allow_html=True)
 st.markdown("""
-- 🏆 Won 2nd Prize, IoTA Project — IoT Based Air Quality Monitoring System (Aug–Sep 2025)
-- 🥇 Secured Rank 5201 (Top 0.2%), Naukri AINCAT 2026 (06/2026)
+-  Won 2nd Prize, IoTA Project — IoT Based Air Quality Monitoring System (Aug–Sep 2025)
+-  Secured Rank 5201 (Top 0.2%), Naukri AINCAT 2026 (06/2026)
 """)
 
 # ---------- CERTIFICATIONS ----------
@@ -213,4 +247,4 @@ st.markdown("""
 """)
 
 st.markdown("---")
-st.markdown("<center>Made with ❤️ using Streamlit</center>", unsafe_allow_html=True)
+
