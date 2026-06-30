@@ -5,13 +5,90 @@ st.set_page_config(page_title="Tetali Thanvika | Portfolio", page_icon="💡", l
 # ---------- CUSTOM CSS ----------
 st.markdown("""
 <style>
-.main { background-color: #0e1117; }
-.big-title { font-size: 42px; font-weight: 800; color: #4FD1C5; margin-bottom:0;}
-.subtitle { font-size: 18px; color: #A0AEC0; margin-top:0;}
-.section-header { font-size: 28px; font-weight: 700; color: #4FD1C5; margin-top: 30px; border-bottom: 2px solid #4FD1C5; padding-bottom:5px;}
-.card { background-color: #1A202C; padding: 18px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #2D3748;}
-.skill-badge { display:inline-block; background-color:#2D3748; color:#4FD1C5; padding:6px 14px; border-radius:20px; margin:4px; font-size:14px;}
-a { color: #4FD1C5 !important; }
+
+/* Background */
+.stApp{
+    background:#2563EB;
+}
+
+/* Main Container */
+.block-container{
+    max-width:1200px;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+
+/* Title */
+.big-title{
+    font-size:60px;
+    font-weight:800;
+    color:white;
+    text-align:center;
+    margin-bottom:5px;
+}
+
+/* Subtitle */
+.subtitle{
+    font-size:22px;
+    color:white;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Section Heading */
+.section-header{
+    background:white;
+    color:#2563EB;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:28px;
+    font-weight:bold;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+
+/* Cards */
+.card{
+    background:white;
+    color:#111827;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* Skills */
+.skill-badge{
+    display:inline-block;
+    background:#2563EB;
+    color:white;
+    padding:8px 16px;
+    margin:5px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* Links */
+a{
+    color:white !important;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* Text */
+p, li{
+    color:#111827;
+}
+
+hr{
+    border:1px solid rgba(255,255,255,.4);
+}
+
 </style>
 """, unsafe_allow_html=True)
 
